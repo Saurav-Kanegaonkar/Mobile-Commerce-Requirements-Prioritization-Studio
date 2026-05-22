@@ -1,0 +1,8 @@
+request_id,request_name,dependency_risk,vendor_dependency,data_dependency,mitigation
+MCR-112,Store pickup promise visibility,90,"Inventory availability service, POS, Tapcart checkout configuration","Store inventory, pickup capacity, cutoff time, reservation state",Resolve integration owner and data contract before sprint grooming
+MCR-105,Store associate clienteling notes,88,"Clienteling partner, POS profile, Tapcart account surface","Customer profile, consent flag, recent orders, store visit context",Draft strawman PRD and validate assumptions with stakeholder
+MCR-101,Loyalty wallet with QR redemption,82,"Tapcart blocks, loyalty provider, POS customer lookup","Unified customer id, points balance, redemption ledger",Draft strawman PRD and validate assumptions with stakeholder
+MCR-108,In-store app install QR attribution,79,"QR provider, analytics SDK, app store attribution","Store id, QR campaign id, install event, first purchase event",Resolve integration owner and data contract before sprint grooming
+MCR-110,Returns eligibility self-service,71,Returns platform and order management API,"Order line, return window, final sale flag, store purchase flag",Draft strawman PRD and validate assumptions with stakeholder
+MCR-103,Personalized occasion shop modules,66,Tapcart conditional content and recommendation feed,"Customer segments, product tags, browsing consent, inventory feed",Draft strawman PRD and validate assumptions with stakeholder
+MCR-107,Order tracking account refresh,46,Order management API and Tapcart account surface,"Order id, fulfillment status, shipment tracking, return status",Groom with delivery lead and confirm release slice

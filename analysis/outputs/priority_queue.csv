@@ -1,26 +1,13 @@
-entity_id,entity_name,segment,priority_score,avg_risk_score,avg_quality_score,estimated_impact
-PRO009,Product request 9,Watch,93.53,51.3,79.6,773308
-PRO001,Product request 1,Growth,90.55,49.3,79.5,747389
-PRO013,Product request 13,Strategic,88.20,49.3,78.7,711057
-PRO020,Product request 20,Strategic,87.94,51.8,79.4,688875
-PRO028,Product request 28,Growth,85.44,50.7,80.3,668005
-PRO005,Product request 5,Watch,85.31,55.7,80.0,621317
-PRO031,Product request 31,Core,84.92,54.5,82.2,636020
-PRO033,Product request 33,Growth,84.16,53.9,80.3,622325
-PRO011,Product request 11,Core,83.25,50.9,81.5,640603
-PRO025,Product request 25,Watch,82.88,51.9,81.7,627450
-PRO010,Product request 10,Growth,81.90,53.7,77.0,577471
-PRO036,Product request 36,Strategic,81.64,50.6,80.8,618104
-PRO030,Product request 30,Core,81.63,54.8,79.0,572999
-PRO016,Product request 16,Watch,81.33,52.5,81.0,597139
-PRO018,Product request 18,Strategic,80.87,53.5,82.1,587533
-PRO019,Product request 19,Core,80.26,52.8,81.6,583288
-PRO017,Product request 17,Core,79.99,52.0,80.3,580320
-PRO032,Product request 32,Watch,78.62,50.4,80.6,576408
-PRO022,Product request 22,Watch,78.61,50.7,81.7,578319
-PRO002,Product request 2,Strategic,78.43,51.0,82.2,575695
-PRO023,Product request 23,Growth,77.15,52.1,80.1,539032
-PRO026,Product request 26,Growth,77.06,48.6,79.9,566950
-PRO007,Product request 7,Growth,76.83,49.9,80.4,554491
-PRO004,Product request 4,Strategic,76.16,48.6,80.5,556708
-PRO012,Product request 12,Core,75.89,48.5,80.9,555729
+rank,request_id,request_name,platform_area,stakeholder,triage_lane,priority_score,business_value,customer_impact,urgency,delivery_effort,dependency_risk,confidence,acceptance_readiness,recommended_next_step
+1,MCR-102,Guest checkout payment failure recovery,Checkout,Ecommerce,Actionable,76.4,91,86,93,18,38,86,88,Groom with delivery lead and confirm release slice
+2,MCR-107,Order tracking account refresh,Account,Customer Care,Actionable,72.2,82,88,84,22,46,81,83,Groom with delivery lead and confirm release slice
+3,MCR-106,Push campaign quiet hours,Messaging,Marketing,Actionable,70.9,74,80,68,12,24,90,95,Groom with delivery lead and confirm release slice
+4,MCR-101,Loyalty wallet with QR redemption,Loyalty,CRM,Discovery,70.5,94,91,88,34,82,74,61,Draft strawman PRD and validate assumptions with stakeholder
+5,MCR-109,Product detail size confidence prompt,Product Detail,Merchandising,Actionable,69.9,79,83,73,20,36,78,84,Groom with delivery lead and confirm release slice
+6,MCR-104,Wishlist contest enrollment,Wishlist,Marketing,Actionable,68.3,76,78,72,16,34,82,91,Groom with delivery lead and confirm release slice
+7,MCR-103,Personalized occasion shop modules,Personalization,Merchandising,Discovery,64.8,89,84,70,30,66,67,58,Draft strawman PRD and validate assumptions with stakeholder
+8,MCR-112,Store pickup promise visibility,Fulfillment,Operations,Blocked,62.8,87,89,76,35,90,46,36,Resolve integration owner and data contract before sprint grooming
+9,MCR-110,Returns eligibility self-service,Post Purchase,Customer Care,Discovery,60.3,81,85,63,29,71,62,53,Draft strawman PRD and validate assumptions with stakeholder
+10,MCR-111,App inbox launch calendar,Messaging,Brand Marketing,Monitor,58.4,68,66,55,18,41,72,76,Keep in operating review and watch signal movement
+11,MCR-105,Store associate clienteling notes,Clienteling,Stores,Discovery,56.4,83,82,61,38,88,54,44,Draft strawman PRD and validate assumptions with stakeholder
+12,MCR-108,In-store app install QR attribution,Omnichannel,Stores,Blocked,55.4,77,58,66,24,79,48,39,Resolve integration owner and data contract before sprint grooming

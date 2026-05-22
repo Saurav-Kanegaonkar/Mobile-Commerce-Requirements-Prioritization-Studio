@@ -1,0 +1,5 @@
+triage_lane,request_count,avg_priority_score,primary_operating_question
+Actionable,5,71.5,Can this be groomed into a delivery-ready slice now?
+Discovery,4,63.0,Which assumptions must be validated before estimation?
+Blocked,2,59.1,Which dependency owner must unblock the path?
+Monitor,1,58.4,What signal would make this worth promoting?

@@ -1,17 +1,36 @@
--- Priority queue foundation
+-- Intake lane mix
 select
-  entity_id,
-  avg(risk_score) as avg_risk_score,
-  avg(quality_score) as avg_quality_score,
-  sum(value_pool) as value_pool
-from daily_metrics
+  triage_lane,
+  count(*) as request_count,
+  avg(business_value) as avg_business_value,
+  avg(dependency_risk) as avg_dependency_risk,
+  avg(acceptance_readiness) as avg_acceptance_readiness
+from mobile_requests
 group by 1
-order by avg_risk_score desc;
+order by request_count desc;
 
--- Action readiness
+-- Sprint-ready candidates
 select
-  action_type,
-  avg(expected_lift_pct) as expected_lift,
-  avg(effort_hours) as effort_hours
-from recommended_actions
-group by 1;
+  request_id,
+  request_name,
+  platform_area,
+  business_value,
+  customer_impact,
+  urgency,
+  acceptance_readiness
+from mobile_requests
+where triage_lane = 'Actionable'
+  and acceptance_readiness >= 80
+order by business_value desc, customer_impact desc;
+
+-- Dependency blockers that need owner resolution
+select
+  request_id,
+  request_name,
+  vendor_dependency,
+  data_dependency,
+  dependency_risk
+from mobile_requests
+where triage_lane = 'Blocked'
+   or dependency_risk >= 75
+order by dependency_risk desc;

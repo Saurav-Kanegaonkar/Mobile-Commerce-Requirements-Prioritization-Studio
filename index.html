@@ -6,49 +6,118 @@
   <title>Mobile Commerce Requirements Prioritization Studio</title>
   <link rel="stylesheet" href="src/styles.css">
 </head>
-<body style="--accent:#dc2626;--bg:#fff1f2">
-  <main class="shell">
-    <header class="hero">
+<body>
+  <main class="app-shell">
+    <header class="topbar">
       <div>
-        <p class="eyebrow">Ops Console / mobile commerce requirements and prioritization</p>
-        <h1>Mobile Commerce Requirements Prioritization Studio</h1>
+        <p class="eyebrow">Mobile commerce product operations</p>
+        <h1>Requirements Prioritization Studio</h1>
+        <p class="lede">A working artifact for turning messy stakeholder asks into triaged, ranked, delivery-ready mobile commerce work.</p>
       </div>
-      <aside>
-        <b>Purpose</b>
-        <span>Turn messy product request-level signals into a ranked operating artifact with recommendations a stakeholder can act on.</span>
-      </aside>
+      <dl class="scorecard" aria-label="Portfolio artifact summary">
+        <div>
+          <dt>Requests</dt>
+          <dd id="metric-requests">--</dd>
+        </div>
+        <div>
+          <dt>Sprint ready</dt>
+          <dd id="metric-ready">--</dd>
+        </div>
+        <div>
+          <dt>Blocked</dt>
+          <dd id="metric-blocked">--</dd>
+        </div>
+        <div>
+          <dt>Handoffs</dt>
+          <dd id="metric-handoffs">--</dd>
+        </div>
+      </dl>
     </header>
-    <section class="metrics">
-      <article><span>Modeled rows</span><strong>6.0K+</strong><em>source-style</em></article>
-      <article><span>Ranked queue</span><strong>25</strong><em>product requests</em></article>
-      <article><span>Action pool</span><strong>220</strong><em>candidates</em></article>
-      <article><span>Review time</span><strong>-6 hrs</strong><em>weekly</em></article>
+
+    <nav class="tabs" aria-label="Studio surfaces">
+      <a href="#intake">Intake triage</a>
+      <a href="#prioritization">Prioritization logic</a>
+      <a href="#handoff">Functional handoff</a>
+    </nav>
+
+    <section id="intake" class="surface">
+      <div class="section-heading">
+        <p class="eyebrow">Surface 1</p>
+        <h2>Intake discipline</h2>
+        <p>Separates requests that can move now from requests that need discovery, dependency clearing, or monitoring.</p>
+      </div>
+      <div class="lane-grid" id="lane-grid"></div>
+      <div class="panel">
+        <div class="panel-heading">
+          <h3>Dependency risk register</h3>
+          <span>Vendor, data, and integration blockers</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Request</th>
+                <th>Risk</th>
+                <th>Dependency</th>
+                <th>Mitigation</th>
+              </tr>
+            </thead>
+            <tbody id="risk-table"></tbody>
+          </table>
+        </div>
+      </div>
     </section>
-    <section class="main-grid">
-      <article class="panel lead">
-        <p class="eyebrow">Launch blockers</p>
-        <h2>Priority queue</h2>
-        <table>
-          <thead><tr><th>product request</th><th>Signal</th><th>Risk</th><th>Next move</th></tr></thead>
-          <tbody>
-            <tr><td>Segment A</td><td>Feedback loop</td><td>High</td><td>Escalate with source check</td></tr>
-            <tr><td>Segment B</td><td>Execution queue</td><td>Medium</td><td>Test with clear owner</td></tr>
-            <tr><td>Segment C</td><td>Quality gap</td><td>Watch</td><td>Document metric definition</td></tr>
-          </tbody>
-        </table>
-      </article>
-      <article class="panel narrative">
-        <p class="eyebrow">What the analysis says</p>
-        <h2>Recommendations over screenshots</h2>
-        <p>The artifact is built around decisions, not dashboard decoration: each source table feeds a ranked queue, and each queue item resolves into a recommendation.</p>
-        <p>The strongest opportunities appear where performance upside, measurement quality, and operating readiness overlap.</p>
-      </article>
+
+    <section id="prioritization" class="surface">
+      <div class="section-heading">
+        <p class="eyebrow">Surface 2</p>
+        <h2>Prioritization logic</h2>
+        <p>An explainable scoring model ranks requests by value, customer impact, urgency, confidence, effort, and delivery risk.</p>
+      </div>
+      <div class="split">
+        <div class="panel queue-panel">
+          <div class="panel-heading">
+            <h3>Ranked mobile app queue</h3>
+            <span>Sorted by weighted priority score</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Request</th>
+                  <th>Lane</th>
+                  <th>Score</th>
+                  <th>Next step</th>
+                </tr>
+              </thead>
+              <tbody id="priority-table"></tbody>
+            </table>
+          </div>
+        </div>
+        <aside class="panel formula-panel">
+          <div class="panel-heading">
+            <h3>Scoring model</h3>
+            <span>Readable enough for grooming</span>
+          </div>
+          <ul class="formula-list">
+            <li><b>Upside:</b> business value, customer impact, urgency, omnichannel fit, confidence.</li>
+            <li><b>Drag:</b> delivery effort, dependency risk, QA complexity, privacy complexity.</li>
+            <li><b>Gate:</b> blocked requests cannot enter sprint planning until the owner and data contract are clear.</li>
+          </ul>
+        </aside>
+      </div>
     </section>
-    <section class="recommendations">
-      <article><b>01</b><h3>Validate</h3><p>Confirm source definitions before scaling the insight into recurring reporting.</p></article>
-      <article><b>02</b><h3>Prioritize</h3><p>Move the highest-value product request segment into the next operating review.</p></article>
-      <article><b>03</b><h3>Automate</h3><p>Convert the queue into a stakeholder-ready digest for repeated decisions.</p></article>
+
+    <section id="handoff" class="surface">
+      <div class="section-heading">
+        <p class="eyebrow">Surface 3</p>
+        <h2>Functional handoff</h2>
+        <p>Turns priority decisions into PRD-ready packages for delivery, QA, and vendor coordination.</p>
+      </div>
+      <div class="handoff-grid" id="handoff-grid"></div>
     </section>
   </main>
+  <script src="src/app.js"></script>
 </body>
 </html>

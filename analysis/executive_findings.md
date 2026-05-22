@@ -1,15 +1,16 @@
 # Executive Findings
 
-## What I analyzed
+## What I Analyzed
 
-I joined 5,040 daily metric rows, 760 source events, and 220 action candidates for mobile commerce requirements and prioritization.
+I modeled 12 synthetic mobile commerce requests across app checkout, loyalty, personalization, account, clienteling, messaging, post purchase, product detail, and omnichannel fulfillment workflows.
 
 ## Findings
 
-- The highest-priority product request is PRO009 with a priority score of 93.53.
-- The top queue combines 51.3 average risk with 79.6 quality score and $773,308 estimated impact.
-- The strongest use case is turning repeated stakeholder questions into a ranked operating digest.
+- The top-ranked actionable request is guest checkout payment failure recovery, with strong urgency, high customer impact, low dependency risk, and high acceptance readiness.
+- Loyalty wallet QR redemption has high business value and omnichannel fit, but it belongs in discovery until customer identity, rewards ledger, QR redemption, and POS lookup dependencies are clarified.
+- Store pickup promise visibility and in-store app install QR attribution are strategically relevant but blocked by integration and attribution dependencies.
+- The best portfolio signal is not the numeric score alone. It is the movement from intake lane to ranked priority to scoped delivery handoff.
 
 ## Recommendation
 
-Prioritize the top queue before scaling more dashboards. The project should help leaders decide which product request risks need action, validation, or monitoring.
+Use the studio to run weekly mobile commerce grooming. Start delivery conversations with the top actionable requests, keep discovery requests moving through strawman PRDs, and force blocked requests to name the integration owner and data contract before entering sprint planning.
